@@ -1,0 +1,52 @@
+body{
+    background: url(https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/iqbu0yaax2ks88minq9l/Wild%20Wadi%20Water%20Park%20Dubai%20Discount%20Tickets%20-%20Klook.jpg) center / cover no-repeat fixed;
+    }
+    .overlay {
+     background: rgba(255, 255, 255, 0.8);
+     padding: 1rem;
+     border-radius: 5px;;
+}
+aside{
+    float:left;
+    background: rgba(203, 250, 250, 0.8);
+    width: 15%;
+    padding:2.5%;
+    height: 100vh;
+    border-right: 2px
+
+}
+aside img {
+ width: 150px;
+ float: center;
+
+}
+
+aside h3{
+    margin-top: 30px;
+    font-size: 20px;
+
+}
+aside ul {list-style: none}
+aside ul li{
+    displey: block;
+    margin-top:20px;
+    transition: transform .6s ease;
+
+    }
+aside ul li:hover, aside ul a:hover{
+    color: #C829F9;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+main .features{
+    float: left;
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
+
+
+
+
+}
+

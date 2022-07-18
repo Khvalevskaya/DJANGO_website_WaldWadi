@@ -1,0 +1,25 @@
+{% extends "main/layout.html" %}
+
+{% block title %}
+<h1>Main page™</h1>
+{% endblock %}
+
+
+{% block content %}
+<div class="features">
+
+    <h1>Wild Wadi Waterpark™</h1>
+    <h3>Wild Wadi Waterpark™ welcomes you and your family back for unforgettable aquatic adventures in one of Dubai’s
+        most
+        iconic waterparks
+    </h3>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <a href="{% url 'button_home' %}"><button class="btn btn-info">BOOK NOW</button></a>
+    <br><br>
+
+    <h4>Visit one of Dubai's most cozy and favorite water parks - Wild Wadi. Located next to the world-famous Burj al-Arab Hotel, it will give you a sea of great mood, an adrenaline rush and wonderful attractions for visitors of all ages.
+
+The name of the park has long been a household name, and the complex itself is considered almost the most popular water park in the UAE. In addition to everything will be a magnificent view of the surrounding attractions and a huge swimming pool with an artificial wave imitating the sea wave.
+    </h4>
+</div>
+{% endblock %}
