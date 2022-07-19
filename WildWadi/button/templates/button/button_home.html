@@ -7,18 +7,22 @@ Ticket prices:™
 
 {% block content %}
 <div class="features">
-    <h1>Packages™</h1>
+    <div class="container">
 
-    {% for el in button %}
-    <div class="alert alert-info">
-        <h3>{{el.title}}</h3>
-        <p>{{el.full_text}}</p>
-        <p>{{price}}</p>
+        <!--        <h1>Packages™</h1>-->
+        <div class="row">
+            {% for el in button %}
+            <div class="col">
+                <div class="alert alert-info">
+                    <h3>{{el.title}}</h3>
+                    <p>{{el.full_text}}</p>
+                    <h3><b>{{el.price}}</b></h3>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
 
-    </div>
-    {% endfor %}
-
-    <div>
+        <p align="center">
         <form>
 
             <label><h2>BOOKING FORM</h2></label>
@@ -52,11 +56,17 @@ Ticket prices:™
                 <label for="child">Child</label>
                 <input type="number" min="1" max="50" id="child" name="child" value="0">
             </div>
+        <p>-----------------------------------------------</p>
+            <p>TOTAL PRICE:</p>
+            <p></p>
             <div class="buttons">
                 <input type="submit" value="BOOK">
             </div>
+
         </form>
     </div>
+</div>
+</div>
 
 
-    {% endblock %}
+{% endblock %}

@@ -11,7 +11,7 @@ aside{
     background: rgba(203, 250, 250, 0.8);
     width: 15%;
     padding:2.5%;
-    height: 100vh;
+    height: 200vh;
     border-right: 2px
 
 }
@@ -41,9 +41,10 @@ aside ul li:hover, aside ul a:hover{
 
 main .features{
     float: left;
-    margin-top: 100px;
+    margin-top: 50px;
     text-align: center;
     width: 75%;
+
 
 }
 
@@ -54,18 +55,21 @@ main .features p {max-width: 400px; margin: 20px auto}
     float: left;
     clear: both;
     width: 400px;
-    margin: 20px 34%;
+    margin: 10px 15%;
+
     text-align: center;
-    padding: 20px;
+    padding: 15px;
+
 
 
 }
 form {
-  width: 400px;
-  margin: 20px 34%;
+  width: 450px;
+  margin: auto;
   padding: 20px;
+  float: center;
 
-  background-color: #ffffff;
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   box-shadow: 0 0 10px #cccccc;
 }
@@ -156,7 +160,6 @@ input[type="submit"] {
 
   text-align: center;
 }
-
 
 
 
