@@ -25,15 +25,37 @@ Ticket prices:™
         <p align="center">
         <form>
 
+
             <label><h2>BOOKING FORM</h2></label>
-            <label for="type">Choose a ticket type:</label>
-            <div class="one-third-width" for="type">
-                <select name="Ticket type" id="type">
-                    <option value=""></option>
-                    <option value="Standart">Standart</option>
-                    <option value="Combo">Combo</option>
-                </select>
+            <br><br>
+            <label for="type"><h3>Choose a ticket type:</h3></label>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="standart_adult" id="standart_adult" value="249"
+                       checked>
+                <label class="form-check-label" for="exampleRadios1">
+                    Standart(AED249)
+                </label>
             </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="standart_child" id="standart_child" value="219">
+                <label class="form-check-label" for="exampleRadios2">
+                    Standart Child(AED219)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="combo_adult" id="combo" value="275">
+                <label class="form-check-label" for="exampleRadios2">
+                    Combo(AED275)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="combo_child" id="combo_child" value="255">
+                <label class="form-check-label" for="exampleRadios2">
+                    Combo Child (AED255)
+                </label>
+            </div>
+
             <br> <br> <br>
 
             <div class="one-third-width">
@@ -50,23 +72,46 @@ Ticket prices:™
             </div>
             <div class="one-third-width">
                 <label for="adult">Adult</label>
-                <input type="number" min="1" max="50" id="adult" name="adult" value="0">
+                <input type="number" min="0" max="50" id="adult" name="adult" value="0">
+
             </div>
             <div class="one-third-width">
                 <label for="child">Child</label>
-                <input type="number" min="1" max="50" id="child" name="child" value="0">
+                <input type="number" min="0" max="50" id="child" name="child" value="0">
             </div>
-        <p>-----------------------------------------------</p>
+            <p>-----------------------------------------------</p>
             <p>TOTAL PRICE:</p>
-            <p></p>
-            <div class="buttons">
-                <input type="submit" value="BOOK">
-            </div>
+            <p id='totalPrice'></p>
+
+            <!--            <div class="buttons">-->
+            <input type="submit" id="bookBtn" value="BOOK">
+            <!--            </div>-->
 
         </form>
     </div>
 </div>
 </div>
+<script type="text/javascript">
+    document.getElementById("bookBtn").onclick = function () {
+        cost = 0
+        if (document.getElementById('standart_adult').checked)
+        {cost+=(249*document.getElementById('adult').value);
+        }
+
+         (document.getElementById('standart_child').checked)
+        {cost+=(219*document.getElementById('child').value);
+        }
+        if (document.getElementById('combo').checked)
+        {cost+=(275*document.getElementById('adult').value);
+        }
+        if (document.getElementById('combo_child').checked)
+        {cost+=(255*document.getElementById('child').value);
+        }
+
+        document.getElementById('totalPrice').innerText = cost ;
+        return false;
+    };
+</script>
 
 
 {% endblock %}
