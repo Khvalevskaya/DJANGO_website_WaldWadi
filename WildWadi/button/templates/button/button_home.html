@@ -28,37 +28,7 @@ Ticket prices:™
 
             <label><h2>BOOKING FORM</h2></label>
             <br><br>
-            <label for="type"><h3>Choose a ticket type:</h3></label>
-
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="standart_adult" id="standart_adult" value="249"
-                       checked>
-                <label class="form-check-label" for="exampleRadios1">
-                    Standart(AED249)
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="standart_child" id="standart_child" value="219">
-                <label class="form-check-label" for="exampleRadios2">
-                    Standart Child(AED219)
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="combo_adult" id="combo" value="275">
-                <label class="form-check-label" for="exampleRadios2">
-                    Combo(AED275)
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="combo_child" id="combo_child" value="255">
-                <label class="form-check-label" for="exampleRadios2">
-                    Combo Child (AED255)
-                </label>
-            </div>
-
-            <br> <br> <br>
-
-            <div class="one-third-width">
+        <div class="one-third-width">
                 <label for="day">Date</label>
                 <input type="number" min="1" max="31" id="day" name="day" value="17">
             </div>
@@ -70,6 +40,45 @@ Ticket prices:™
                 <label for="year">Year</label>
                 <input type="number" min="2022" max="2030" id="year" name="year" value="2022">
             </div>
+        <br><br>
+            <label><h3>Choose a ticket type:</h3></label>
+            <script type="text/javascript">
+                var a,b;
+                function foo(c) {
+                if (a != c) {b = 0;a = c};
+                b ^= 1;
+                c.checked = b
+                };
+            </script>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="standart_adult" id="standart_adult"
+                       value="249" onclick="foo(this)">
+                <label class="form-check-label" for="standart_adult">Standart(AED249)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="standart_child" id="standart_child"
+                       value="219" onclick="foo(this)">
+                <label class="form-check-label" for="standart_child">
+                    Standart Child(AED219)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="combo_adult" id="combo_adult" value="275" onclick="foo(this)">
+                <label class="form-check-label" for="combo_adult">
+                    Combo(AED275)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="combo_child" id="combo_child" value="255" onclick="foo(this)">
+                <label class="form-check-label" for="combo_child">
+                    Combo Child (AED255)
+                </label>
+            </div>
+
+            <br> <br>
+
+
             <div class="one-third-width">
                 <label for="adult">Adult</label>
                 <input type="number" min="0" max="50" id="adult" name="adult" value="0">
@@ -81,7 +90,7 @@ Ticket prices:™
             </div>
             <p>-----------------------------------------------</p>
             <p>TOTAL PRICE:</p>
-            <p id='totalPrice'></p>
+            <p id='totalPrice'></p><h5>AED</h5>
 
             <!--            <div class="buttons">-->
             <input type="submit" id="bookBtn" value="BOOK">
@@ -97,11 +106,10 @@ Ticket prices:™
         if (document.getElementById('standart_adult').checked)
         {cost+=(249*document.getElementById('adult').value);
         }
-
-         (document.getElementById('standart_child').checked)
+        if (document.getElementById('standart_child').checked)
         {cost+=(219*document.getElementById('child').value);
         }
-        if (document.getElementById('combo').checked)
+        if (document.getElementById('combo_adult').checked)
         {cost+=(275*document.getElementById('adult').value);
         }
         if (document.getElementById('combo_child').checked)
@@ -111,6 +119,8 @@ Ticket prices:™
         document.getElementById('totalPrice').innerText = cost ;
         return false;
     };
+
+
 </script>
 
 
