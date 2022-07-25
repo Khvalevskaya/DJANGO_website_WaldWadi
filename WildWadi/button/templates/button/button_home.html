@@ -28,7 +28,7 @@ Ticket prices:™
 
             <label><h2>BOOKING FORM</h2></label>
             <br><br>
-        <div class="one-third-width">
+            <div class="one-third-width">
                 <label for="day">Date</label>
                 <input type="number" min="1" max="31" id="day" name="day" value="17">
             </div>
@@ -40,7 +40,7 @@ Ticket prices:™
                 <label for="year">Year</label>
                 <input type="number" min="2022" max="2030" id="year" name="year" value="2022">
             </div>
-        <br><br>
+            <br><br>
             <label><h3>Choose a ticket type:</h3></label>
             <script type="text/javascript">
                 var a,b;
@@ -49,6 +49,10 @@ Ticket prices:™
                 b ^= 1;
                 c.checked = b
                 };
+
+
+
+
             </script>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="standart_adult" id="standart_adult"
@@ -64,13 +68,15 @@ Ticket prices:™
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="combo_adult" id="combo_adult" value="275" onclick="foo(this)">
+                <input class="form-check-input" type="radio" name="combo_adult" id="combo_adult" value="275"
+                       onclick="foo(this)">
                 <label class="form-check-label" for="combo_adult">
                     Combo(AED275)
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="combo_child" id="combo_child" value="255" onclick="foo(this)">
+                <input class="form-check-input" type="radio" name="combo_child" id="combo_child" value="255"
+                       onclick="foo(this)">
                 <label class="form-check-label" for="combo_child">
                     Combo Child (AED255)
                 </label>
@@ -90,7 +96,10 @@ Ticket prices:™
             </div>
             <p>-----------------------------------------------</p>
             <p>TOTAL PRICE:</p>
-            <p id='totalPrice' name='totalPrice'></p><h5>AED</h5>
+            <input type="hidden" name="totalPrice" id="total">
+            <p id="totalPrice"></p>
+
+            <h5>AED</h5>
 
 
             <input type="submit" id="bookBtn" value="BOOK">
@@ -119,8 +128,13 @@ Ticket prices:™
         }
 
         document.getElementById('totalPrice').innerText = cost ;
+        document.getElementById('total').value = cost ;
         return false;
     };
+
+
+
+
 
 
 </script>

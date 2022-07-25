@@ -13,7 +13,7 @@ def total_price(request):
     date = request.GET["day"]
     month = request.GET["month"]
     year = request.GET["year"]
-    # total = request.GET["totalPrice"]
+    total = request.GET["totalPrice"]
+    print(total)
 
-
-    return render(request, "button/total_price.html", {"adult": adult_num, "child": child_num, "day": date, "month": month, "year": year})
+    return render(request, "button/total_price.html", {"adult": adult_num, "child": child_num, "day": date, "month": month, "year": year, "totalPrice": total})
