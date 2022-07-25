@@ -23,7 +23,7 @@ Ticket prices:™
         </div>
 
         <p align="center">
-        <form>
+        <form action="total_price" id="complete">
 
 
             <label><h2>BOOKING FORM</h2></label>
@@ -90,11 +90,13 @@ Ticket prices:™
             </div>
             <p>-----------------------------------------------</p>
             <p>TOTAL PRICE:</p>
-            <p id='totalPrice'></p><h5>AED</h5>
+            <p id='totalPrice' name='totalPrice'></p><h5>AED</h5>
 
-            <!--            <div class="buttons">-->
+
             <input type="submit" id="bookBtn" value="BOOK">
-            <!--            </div>-->
+            <br><br>
+
+            <input type="submit" id="complete" value="Complete the booking">
 
         </form>
     </div>

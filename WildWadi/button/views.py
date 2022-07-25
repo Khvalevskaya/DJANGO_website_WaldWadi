@@ -7,13 +7,13 @@ def button_home(request):
     return render(request, "button/button_home.html", {"button": button})
 
 
-# def total_price(request):
-#     adult_num = request.GET["adult"]
-#     child_num = request.GET["child"]
-#     type = request.GET
-#     tickets = {"standart_adult": [249, 100],
-#                "standart_child": [219, 100],
-#                "combo_adult": [275, 100],
-#                "combo_child": [255, 100]}
-#
-#     return render(request, "button/total_price.html", {"adult": adult_num, "child": child_num})
+def total_price(request):
+    adult_num = request.GET["adult"]
+    child_num = request.GET["child"]
+    date = request.GET["day"]
+    month = request.GET["month"]
+    year = request.GET["year"]
+    # total = request.GET["totalPrice"]
+
+
+    return render(request, "button/total_price.html", {"adult": adult_num, "child": child_num, "day": date, "month": month, "year": year})
